@@ -1,56 +1,55 @@
 # IDE Toolbox
 
-> ⚡️ Фановая IDE и менеджер проектов для Windows. Просто чтобы было! Не воспринимай всерьёз, но вдруг пригодится ;)
+> ⚡️ A fun IDE and project manager for Windows. Just for the vibes! Don't take it too seriously, but hey, maybe you'll find it useful ;)
 
-## Требования
-- Node.js **24.0.0** или новее ([скачать Node.js](https://nodejs.org/))
+## Requirements
+- Node.js **24.0.0** or newer ([download Node.js](https://nodejs.org/))
 
-## Скриншот
+## Screenshot
 
 ![icon](icon.png)
 
 ---
 
-## Быстрый старт
+## Quick Start
 
-### 1. Клонируй репозиторий
+### 1. Clone the repository
 ```sh
 git clone https://github.com/<your-username>/<repo-name>.git
 cd IDE-Toolbox
 ```
 
-### 2. Установи зависимости
+### 2. Install dependencies
 ```sh
 npm install
 ```
 
-### 3. Запусти в режиме разработки
+### 3. Run in development mode
 ```sh
 npm start
 ```
 
 ---
 
-## Сборка под продакшн
+## Build for Production
 
-Собираем инсталлятор для Windows:
+Create a Windows installer:
 ```sh
 npm run build
 ```
 
-Файл появится в папке `dist/`.
+The installer will appear in the `dist/` folder.
 
 ---
 
-## Что умеет эта штука?
-- Управляет проектами (SQLite база)
-- Логирует активность
-- Красивый интерфейс на Electron
-- Просто весело и удобно!
+## What can this thing do?
+- Manage your projects (SQLite database)
+- Slick Electron interface
+- Just fun and handy!
 
 ---
 
-## Зависимости
+## Dependencies
 - [Electron](https://www.electronjs.org/)
 - [sqlite3](https://www.npmjs.com/package/sqlite3)
 - [dayjs](https://www.npmjs.com/package/dayjs)
@@ -58,10 +57,10 @@ npm run build
 
 ---
 
-## Для кого это?
-Для тех, кто любит пофаниться с кодом, не боится экспериментировать и хочет свою мини-IDE под Windows. Всё просто, без лишнего пафоса!
+## Who is this for?
+For those who love to mess around with code, aren't afraid to experiment, and want their own mini-IDE for Windows. Simple, no fuss!
 
 ---
 
-## Лицензия
-ISC. Используй как хочешь, только не злись, если что-то сломается :) 
+## License
+ISC. Use it however you want, just don't get mad if something breaks :) 
