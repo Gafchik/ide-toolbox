@@ -1,4 +1,3 @@
-
 const { app, BrowserWindow, ipcMain, Tray, Menu, screen, dialog } = require('electron')
 const path = require('path')
 const { execFile, exec } = require('child_process')
@@ -24,7 +23,7 @@ function createWindow () {
     y: y,
     resizable: false,
     movable: false, // Запрещаем перемещение
-    icon: path.join(__dirname, 'icon.png'),
+    icon: path.join(__dirname, 'icon.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'render.js'),
       nodeIntegration: true,
@@ -60,7 +59,7 @@ app.whenReady().then(() => {
   const t = translations[lang];
 
   // Создаём Tray
-  tray = new Tray(path.join(__dirname, 'icon.png'));
+  tray = new Tray(path.join(__dirname, 'icon.ico'));
   const contextMenu = Menu.buildFromTemplate([
     {
       label: t.trayShowHide,
