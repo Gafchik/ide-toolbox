@@ -1066,3 +1066,33 @@ tbody tr td {
   box-sizing: border-box;
 }
 
+/* Стилизуем поле поиска проектов как селектор выбора программы */
+#project-search {
+  background: #221b3a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 1.1em;
+  outline: none;
+  margin-left: 20px;
+  margin-right: 10px;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 #0000000a;
+}
+#project-search:focus {
+  box-shadow: 0 0 0 2px #7c3aed44;
+}
+
+/* Отступ между фильтром и списком проектов */
+#projectsList {
+  margin-top: 18px;
+}
+
+/* Корректируем .projects-header для выравнивания */
+.projects-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+

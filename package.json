@@ -8,7 +8,6 @@
     "start": "electron .",
     "build": "electron-builder"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,7 +17,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "electron": "^37.1.0",
+    "electron": "^37.2.0",
     "electron-builder": "^26.0.12"
   },
   "build": {
@@ -28,10 +27,25 @@
       "**/*"
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "icon.png",
+      "signAndEditExecutable": false
     },
     "asarUnpack": [
       "**/node_modules/sqlite3/**"
-    ]
+    ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true,
+      "shortcutName": "IDE Toolbox",
+      "allowElevation": true,
+      "installerSidebar": "icon.png",
+      "uninstallerSidebar": "icon.png",
+      "include": "installer.nsh"
+    }
   }
 }

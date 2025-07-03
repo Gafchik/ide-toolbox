@@ -32,9 +32,10 @@
           </button>
         </div>
       </div>
-      <div class="projects-bar">
-        <span class="projects-title">Проекты</span>
-        <button id="addProjectBtn" title="Добавить проект">+</button>
+      <div class="projects-header" style="display: flex; align-items: center; gap: 12px;">
+        <span style="min-width:70px;">Projects</span>
+        <input id="project-search" type="text" placeholder="Search projects..." style="flex-grow:1; min-width:0;">
+        <button id="addProjectBtn" class="add-project-btn" title="Add project" style="margin-left:auto;">+</button>
       </div>
       <div id="projectsList"></div>
     </div>

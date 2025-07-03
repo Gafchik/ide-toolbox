@@ -62,11 +62,16 @@ async function loadPrograms() {
   })
 }
 
-async function loadProjects() {
+async function loadProjects(filter = '') {
   projects = await ipcRenderer.invoke('get-projects')
   const list = document.getElementById('projectsList')
   list.innerHTML = ''
-  projects.forEach(p => {
+  let filtered = projects
+  if (filter) {
+    const f = filter.toLowerCase()
+    filtered = projects.filter(p => p.name.toLowerCase().includes(f))
+  }
+  filtered.forEach(p => {
     const card = document.createElement('div')
     card.className = 'project-card'
     const avatar = document.createElement('div')
@@ -206,6 +211,13 @@ window.addEventListener('DOMContentLoaded', () => {
       await loadPrograms()
       await loadProjects()
     }, true)
+  }
+
+  const search = document.getElementById('project-search')
+  if (search) {
+    search.addEventListener('input', e => {
+      loadProjects(e.target.value)
+    })
   }
 
   const langSelect = document.getElementById('langSelect')
